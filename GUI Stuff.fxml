@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="Layout" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="304.0" text="TITLE" textAlignment="CENTER">
          <font>
@@ -19,12 +18,12 @@
       <HBox alignment="CENTER" prefHeight="28.0" prefWidth="303.0">
          <children>
             <Label alignment="CENTER" text="Enter Your Zip Code:" />
-            <TextField />
+            <TextField fx:id="zip" />
          </children>
       </HBox>
-      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Select Zip Code" textAlignment="CENTER" />
+      <Button fx:id="zipButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#getZip" text="Select Zip Code" textAlignment="CENTER" />
       <VBox prefHeight="24.0" prefWidth="358.0" />
-      <ChoiceBox prefWidth="150.0" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="139.0" layoutY="76.0" mnemonicParsing="false" text="Select Utility Name" textAlignment="CENTER" />
+      <ChoiceBox fx:id="selection" prefWidth="150.0" />
+      <Button fx:id="utilityButton" alignment="CENTER" contentDisplay="CENTER" layoutX="139.0" layoutY="76.0" mnemonicParsing="false" onAction="#getUtility" text="Select Utility Name" textAlignment="CENTER" />
    </children>
 </VBox>
